@@ -1,0 +1,62 @@
+[glow_ores]
+
+
+--- Default Ores ---
+[Default Ores]
+
+-- Coal
+[*Coal]
+is_glow_coal (Enable glowing coal) bool false
+coal_glow_level (Light level of glowing coal) int 4 1 14
+
+-- Iron
+[*Iron]
+is_glow_iron (Enable glowing iron) bool false
+iron_glow_level (Light level of glowing iron) int 4 1 14
+
+-- Copper
+[*Copper]
+is_glow_copper (Enable glowing copper) bool false
+copper_glow_level (Light level of glowing copper) int 4 1 14
+
+-- Tin
+[*Tin]
+is_glow_tin (Enable glowing tin) bool false
+tin_glow_level (Light level of glowing tin) int 4 1 14
+
+-- Gold
+[*Gold]
+is_glow_gold (Enable glowing gold) bool false
+gold_glow_level (Light level of glowing gold) int 6 1 14
+
+-- Mese
+[*Mese]
+is_glow_mese (Enable glowing mese) bool true
+mese_glow_level (Light level of glowing mese) int 4 1 14
+
+-- Diamond
+[*Diamond]
+is_glow_diamond (Enable glowing diamond) bool false
+diamond_glow_level (Light level of glowing diamond) int 4 1 14
+
+
+--- More Ores ---
+[More Ores]
+
+-- Silver
+[*Silver]
+is_glow_silver (Enable glowing silver) bool false
+silver_glow_level (Light level of glowing silver) int 4 1 14
+
+-- Mithril
+[*Mithril]
+is_glow_mithril (Enable glowing mithril) bool true
+mithril_glow_level (Light level of glowing mithril) int 11 1 14
+
+
+--- Rainbow Ore ---
+[Rainbow Ore]
+
+-- Rainbow Ore
+is_glow_rainbow (Enable glowing rainbow ore) bool true
+rainbow_glow_level (Light level of glowing rainbow) int 14 1 14
