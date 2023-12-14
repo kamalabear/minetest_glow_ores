@@ -1,6 +1,5 @@
 local S = minetest.get_translator("glow_ores")
 
--- Settings
 local is_glow_coal = minetest.settings:get_bool("is_glow_coal")
 local coal_glow_level = tonumber(minetest.settings:get("coal_glow_level"))
 if is_glow_coal then
@@ -16,7 +15,7 @@ if is_glow_coal then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_coal", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -44,7 +43,7 @@ if is_glow_iron then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_iron", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -72,7 +71,7 @@ if is_glow_copper then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_copper", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -100,7 +99,7 @@ if is_glow_tin then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_tin", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -128,7 +127,7 @@ if is_glow_gold then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_gold", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -156,7 +155,7 @@ if is_glow_diamond then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":default:stone_with_diamond", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -184,7 +183,7 @@ if is_glow_silver then
     local drawtype = ore.drawtype
     local sunlight_propagates = ore.sunlight_propagates
     minetest.register_node(":moreores:mineral_silver", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -208,7 +207,7 @@ if is_glow_mithril then
     local drop = ore.drop
     local is_ground_content = ore.is_ground_content
     minetest.register_node(":moreores:mineral_mithril", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -232,7 +231,7 @@ if is_glow_mese then
     drop = ore.drop
     is_ground_content = ore.is_ground_content
     minetest.register_node(":default:stone_with_mese", {
-        description = S(description),
+        description = description,
         tiles = tiles,
         groups = groups,
         drop = drop,
@@ -261,7 +260,7 @@ if minetest.get_modpath("rainbow_ore") then
         local drawtype = ore.drawtype
         local sunlight_propagates = ore.sunlight_propagates
         minetest.register_node(":rainbow_ore:rainbow_ore_block", {
-            description = S(description),
+            description = description,
             tiles = tiles,
             groups = groups,
             drop = drop,
