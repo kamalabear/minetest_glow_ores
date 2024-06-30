@@ -2,32 +2,32 @@
 
 default_glow_level (Light level of any ores without explicit settings) int 4 1 14
 
-is_glow_coal (Enable glowing coal) bool false
-coal_glow_level (Light level of glowing coal) int 4 1 14
+is_glow_default_stone_with_coal (Enable glowing coal) bool false
+default_stone_with_coal_glow_level (Light level of glowing coal) int 4 1 14
 
-is_glow_iron (Enable glowing iron) bool false
-iron_glow_level (Light level of glowing iron) int 4 1 14
+is_glow_default_stone_with_iron (Enable glowing iron) bool false
+default_stone_with_iron_glow_level (Light level of glowing iron) int 4 1 14
 
-is_glow_copper (Enable glowing copper) bool false
-copper_glow_level (Light level of glowing copper) int 4 1 14
+is_glow_default_stone_with_copper (Enable glowing copper) bool false
+default_stone_with_copper_glow_level (Light level of glowing copper) int 4 1 14
 
-is_glow_tin (Enable glowing tin) bool false
-tin_glow_level (Light level of glowing tin) int 4 1 14
+is_glow_default_stone_with_tin (Enable glowing tin) bool false
+default_stone_with_tin_glow_level (Light level of glowing tin) int 4 1 14
 
-is_glow_gold (Enable glowing gold) bool false
-gold_glow_level (Light level of glowing gold) int 6 1 14
+is_glow_default_stone_with_gold (Enable glowing gold) bool false
+default_stone_with_gold_glow_level (Light level of glowing gold) int 6 1 14
 
-is_glow_mese (Enable glowing mese) bool false
-mese_glow_level (Light level of glowing mese) int 4 1 14
+is_glow_default_stone_with_mese (Enable glowing mese) bool false
+default_stone_with_mese_glow_level (Light level of glowing mese) int 4 1 14
 
-is_glow_diamond (Enable glowing diamond) bool false
-diamond_glow_level (Light level of glowing diamond) int 4 1 14
+is_glow_default_stone_with_diamond (Enable glowing diamond) bool false
+default_stone_with_diamond_glow_level (Light level of glowing diamond) int 4 1 14
 
-is_glow_silver (Enable glowing silver) bool false
-silver_glow_level (Light level of glowing silver) int 4 1 14
+is_glow_moreores_silver (Enable glowing silver) bool false
+moreores_silver_glow_level (Light level of glowing silver) int 4 1 14
 
-is_glow_mithril (Enable glowing mithril) bool false
-mithril_glow_level (Light level of glowing mithril) int 11 1 14
+is_glow_moreores_mithril (Enable glowing mithril) bool false
+moreores_mithril_glow_level (Light level of glowing mithril) int 11 1 14
 
-is_glow_rainbow (Enable glowing rainbow ore) bool true
-rainbow_glow_level (Light level of glowing rainbow) int 14 1 14
+is_glow_rainbow_ore_rainbow_ore_block (Enable glowing rainbow ore) bool true
+rainbow_ore_rainbow_ore_block_glow_level (Light level of glowing rainbow) int 14 1 14
