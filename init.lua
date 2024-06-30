@@ -1,5 +1,48 @@
 local S = minetest.get_translator("glow_ores")
 
+default_glow_level = tonumber(minetest.settings:get("default_glow_level"))
+if default_glow_level == nil then
+    default_glow_level = 4
+end
+
+minetest.log("[glow_ores]default_glow_level = "..default_glow_level)
+
+for name, reg in pairs(minetest.registered_ores) do
+	if reg.ore_type == "scatter" then
+        minetest.log("[glow_ores]Found ore "..reg.ore)
+        ore = minetest.registered_nodes[reg.ore]
+        itemname = ore.name
+        itemname = string.gsub(itemname, ":", "_")
+        is_setting = minetest.settings:get_bool("is_glow_"..itemname)
+        level_setting = tonumber(minetest.settings:get(itemname.."_glow_level"))
+        if is_setting == nil and default_glow_level and default_glow_level > 0 then
+            minetest.log("[glow_ores]Using the default glow level")
+            ore.light_source = default_glow_level
+            description = ore.description
+            tiles = ore.tiles
+            groups = ore.groups
+            drop = ore.drop
+            is_ground_content = ore.is_ground_content
+            local paramtype = ore.paramtype
+            local use_texture_alpha = ore.use_texture_alpha
+            local drawtype = ore.drawtype
+            local sunlight_propagates = ore.sunlight_propagates
+            minetest.register_node(":"..ore.name, {
+                description = description,
+                tiles = tiles,
+                groups = groups,
+                drop = drop,
+                is_ground_content = is_ground_content,
+                light_source = default_glow_level,
+                paramtype = paramtype,
+                use_texture_alpha = use_texture_alpha,
+                drawtype = drawtype,
+                sunlight_propagates = sunlight_propagates,
+            })
+        end
+    end
+end
+
 local is_glow_coal = minetest.settings:get_bool("is_glow_coal")
 local coal_glow_level = tonumber(minetest.settings:get("coal_glow_level"))
 local ore = minetest.registered_nodes["default:stone_with_coal"]

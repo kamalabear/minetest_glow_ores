@@ -1,5 +1,7 @@
 [glow_ores]
 
+default_glow_level (Light level of any ores without explicit settings) int 4 1 14
+
 is_glow_coal (Enable glowing coal) bool false
 coal_glow_level (Light level of glowing coal) int 4 1 14
 
