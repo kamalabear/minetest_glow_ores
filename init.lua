@@ -13,8 +13,10 @@ for name, reg in pairs(minetest.registered_ores) do
         ore = minetest.registered_nodes[reg.ore]
         itemname = ore.name
         itemname = string.gsub(itemname, ":", "_")
-        is_setting = minetest.settings:get_bool("is_glow_"..itemname)
-        level_setting = tonumber(minetest.settings:get(itemname.."_glow_level"))
+        is_setting_key = "is_glow_"..itemname
+        is_setting = minetest.settings:get_bool(is_setting_key)
+        level_setting_key = itemname.."_glow_level"
+        level_setting = tonumber(minetest.settings:get(level_setting_key))
         if is_setting == nil and default_glow_level and default_glow_level > 0 then
             minetest.log("[glow_ores]Using the default glow level")
             ore.light_source = default_glow_level
@@ -48,6 +50,7 @@ local coal_glow_level = tonumber(minetest.settings:get("coal_glow_level"))
 local ore = minetest.registered_nodes["default:stone_with_coal"]
 if ore and is_glow_coal then
     --Redefine coal ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..coal_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -76,6 +79,7 @@ local iron_glow_level = tonumber(minetest.settings:get("iron_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_iron"]
 if ore and is_glow_iron then
     --Redefine iron ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..iron_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -104,6 +108,7 @@ local copper_glow_level = tonumber(minetest.settings:get("copper_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_copper"]
 if ore and is_glow_copper then
     --Redefine copper ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..copper_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -132,6 +137,7 @@ local tin_glow_level = tonumber(minetest.settings:get("tin_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_tin"]
 if ore and is_glow_tin then
     --Redefine tin ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..tin_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -160,6 +166,7 @@ local gold_glow_level = tonumber(minetest.settings:get("gold_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_gold"]
 if ore and is_glow_gold then
     --Redefine gold ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..gold_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -188,6 +195,7 @@ local diamond_glow_level = tonumber(minetest.settings:get("diamond_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_diamond"]
 if ore and is_glow_diamond then
     --Redefine diamond ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..diamond_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -216,6 +224,7 @@ local silver_glow_level = tonumber(minetest.settings:get("silver_glow_level"))
 ore = minetest.registered_nodes["moreores:mineral_silver"]
 if ore and is_glow_silver then
     --Redefine silver ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..silver_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -244,6 +253,7 @@ local mithril_glow_level = tonumber(minetest.settings:get("mithril_glow_level"))
 ore = minetest.registered_nodes["moreores:mineral_mithril"]
 if ore and is_glow_mithril then
     -- Redefine mineral_mithril node
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..mithril_glow_level)
     local description = ore.description
     local tiles = ore.tiles
     local groups = ore.groups
@@ -268,6 +278,7 @@ local mese_glow_level = tonumber(minetest.settings:get("mese_glow_level"))
 ore = minetest.registered_nodes["default:stone_with_mese"]
 if ore and is_glow_mese then
     -- Redefine stone_with_mese node
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..mese_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
@@ -292,6 +303,7 @@ local rainbow_glow_level = tonumber(minetest.settings:get("rainbow_glow_level"))
 ore = minetest.registered_nodes["rainbow_ore:rainbow_ore_block"]
 if ore and is_glow_rainbow then
     --Redefine Rainbow ore
+    minetest.log("[glow_ores]Setting glow level of "..ore.name.." to "..rainbow_glow_level)
     description = ore.description
     tiles = ore.tiles
     groups = ore.groups
