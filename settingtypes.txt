@@ -3,31 +3,41 @@
 default_glow_level (Light level of any ores without explicit settings) int 4 1 14
 
 is_glow_default_stone_with_coal (Enable glowing coal) bool false
+is_use_custom_coal (Use the custom glow level listed below) bool false
 default_stone_with_coal_glow_level (Light level of glowing coal) int 4 1 14
 
 is_glow_default_stone_with_iron (Enable glowing iron) bool false
+is_use_custom_iron (Use the custom glow level listed below) bool false
 default_stone_with_iron_glow_level (Light level of glowing iron) int 4 1 14
 
 is_glow_default_stone_with_copper (Enable glowing copper) bool false
+is_use_custom_copper (Use the custom glow level listed below) bool false
 default_stone_with_copper_glow_level (Light level of glowing copper) int 4 1 14
 
 is_glow_default_stone_with_tin (Enable glowing tin) bool false
+is_use_custom_tin (Use the custom glow level listed below) bool false
 default_stone_with_tin_glow_level (Light level of glowing tin) int 4 1 14
 
 is_glow_default_stone_with_gold (Enable glowing gold) bool false
+is_use_custom_gold (Use the custom glow level listed below) bool false
 default_stone_with_gold_glow_level (Light level of glowing gold) int 6 1 14
 
 is_glow_default_stone_with_mese (Enable glowing mese) bool false
+is_use_custom_mese (Use the custom glow level listed below) bool false
 default_stone_with_mese_glow_level (Light level of glowing mese) int 4 1 14
 
 is_glow_default_stone_with_diamond (Enable glowing diamond) bool false
+is_use_custom_diamond (Use the custom glow level listed below) bool false
 default_stone_with_diamond_glow_level (Light level of glowing diamond) int 4 1 14
 
 is_glow_moreores_silver (Enable glowing silver) bool false
+is_use_custom_silver (Use the custom glow level listed below) bool false
 moreores_silver_glow_level (Light level of glowing silver) int 4 1 14
 
 is_glow_moreores_mithril (Enable glowing mithril) bool false
+is_use_custom_mithril (Use the custom glow level listed below) bool false
 moreores_mithril_glow_level (Light level of glowing mithril) int 11 1 14
 
 is_glow_rainbow_ore_rainbow_ore_block (Enable glowing rainbow ore) bool true
+is_use_custom_rainbow (Use the custom glow level listed below) bool false
 rainbow_ore_rainbow_ore_block_glow_level (Light level of glowing rainbow) int 14 1 14
