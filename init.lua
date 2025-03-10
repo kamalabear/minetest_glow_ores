@@ -37,6 +37,23 @@ function reduce(num)
     return num
 end
 
+global COMMON = default_glow_level
+global SPECIAL = ( MAX - COMMON ) / 3
+global PRECIOUS = SPECIAL * 2
+global RARE = MAX
+
+-- Determine the scarcity category
+function get_glow_category(scarcity)
+    if num is nil or num < 2500 then
+        return COMMON
+    elseif num < 5000 then
+        return SPECIAL
+    elseif num < 7500 then
+        return PRECIOUS
+    end
+    return RARE
+end
+
 -- Determine the light_source level for the passed ore.
 function get_glow_level(ore)
     minetest.log("info", "[glow_ores]Getting glow level for "..(ore.ore or "nil"))
@@ -45,10 +62,10 @@ function get_glow_level(ore)
         return default_glow_level
     elseif ore.clust_scarcity then
         minetest.log("debug", "[glow_ores]In get_glow_level... using clust_scarcity of "..ore.clust_scarcity)
-        return reduce(ore.clust_scarcity)
+        return get_glow_category(ore.clust_scarcity)
     elseif ore.clust_size then
         minetest.log("debug", "[glow_ores]In get_glow_level... using clust_size of "..ore.clust_size)
-        return reduce(ore.clust_size)
+        return get_glow_category(ore.clust_size)
     else
         minetest.log("debug", "[glow_ores]In get_glow_level... using default glow level")
         return default_glow_level
